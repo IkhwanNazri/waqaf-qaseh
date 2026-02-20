@@ -19,10 +19,10 @@ export default function Home() {
     <div className="min-h-screen bg-[#FDFDFD] text-slate-900 font-sans selection:bg-emerald-100">
 
       {/* 1. ANNOUNCEMENT */}
-      <div className="bg-emerald-900 text-emerald-100 text-[10px] py-2.5 text-center font-bold tracking-[0.2em] uppercase">
+      {/* <div className="bg-emerald-900 text-emerald-100 text-[10px] py-2.5 text-center font-bold tracking-[0.2em] uppercase">
         <span className="bg-emerald-500 text-white px-2 py-0.5 rounded mr-2">RASMI</span>
         Pelepasan Cukai Pendapatan Di Bawah Seksyen 44(6) Akta Cukai 1967
-      </div>
+      </div> */}
 
       {/* 2. NAVBAR */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 px-8 h-20 flex justify-between items-center">
