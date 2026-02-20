@@ -108,7 +108,7 @@ export default function Home() {
               alt="Wakaf"
               onError={(e) => {
                 e.currentTarget.onerror = null; // Elak loop
-                e.currentTarget.src = "https://images.unsplash.com/photo-1590076215667-873d3143965de?q=80&w=1000";
+                e.currentTarget.src = "/images/masjid.jpeg";
               }}
             />
           </div>
