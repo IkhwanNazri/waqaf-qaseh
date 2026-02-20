@@ -35,9 +35,9 @@ export default function Home() {
           <a href="#" className="hover:text-emerald-600 transition">Transparansi</a>
           <a href="#" className="hover:text-emerald-600 transition">Hubungi</a>
         </div>
-        <button className="bg-slate-900 text-white px-8 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest shadow-xl shadow-slate-200 active:scale-95 transition-all">
-          Sertai Kami
-        </button>
+        <a href="/wakaf" className="bg-emerald-600 text-white px-6 py-2 text-center rounded-full font-bold text-xs uppercase tracking-widest shadow-xl shadow-slate-200 active:scale-95 transition-all">
+          Infaq Sekarang
+        </a>
       </nav>
 
       {/* 3. HERO SECTION + CTA */}
@@ -89,9 +89,9 @@ export default function Home() {
 
           {/* CTA BUTTONS */}
           <div className="flex flex-wrap gap-4 mb-12">
-            <button className="bg-emerald-600 text-white px-10 py-5 rounded-2xl font-black text-lg flex items-center gap-3 hover:bg-emerald-700 transition-all shadow-2xl shadow-emerald-100 active:scale-95">
+            <a href="/wakaf" className="bg-emerald-600 text-white px-10 py-5 rounded-2xl font-black text-lg flex items-center gap-3 hover:bg-emerald-700 transition-all shadow-2xl shadow-emerald-100 active:scale-95">
               Mula Berwakaf <ArrowRightIcon className="w-5 h-5" />
-            </button>
+            </a>
             <button className="bg-white border-2 border-slate-100 text-slate-900 px-10 py-5 rounded-2xl font-black text-lg flex items-center gap-3 hover:bg-slate-50 transition-all">
               <PlayIcon className="w-5 h-5 fill-slate-900" /> Lihat Video
             </button>
