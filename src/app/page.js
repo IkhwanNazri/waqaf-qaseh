@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { motion } from "framer-motion"; // Pastikan import ni betul
 import {
   AcademicCapIcon,
   HeartIcon,
@@ -46,9 +47,19 @@ export default function Home() {
             <CheckBadgeIcon className="w-5 h-5" />
             Platform Wakaf Patuh Syariah
           </div>
-          <h1 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tight mb-8">
+          <motion.h1
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }} // Mula gerak bila 100px masuk skrin
+            transition={{
+              duration: 1,
+              ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier untuk gerakan lebih "mahal"
+              delay: 0.1
+            }}
+
+            className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tight mb-8">
             Ubah <span className="text-emerald-600 italic font-serif text-5xl md:text-7xl">Niat</span> <br /> Menjadi Jariah.
-          </h1>
+          </motion.h1>
           <p className="text-xl text-slate-500 leading-relaxed mb-8 max-w-lg font-medium">
             Sumbangan anda diagihkan secara telus kepada pendidikan asnaf, fasiliti kesihatan, dan pembangunan masjid di seluruh Malaysia.
           </p>
@@ -118,9 +129,50 @@ export default function Home() {
       {/* 4. PROGRAM CARDS */}
       <section className="bg-slate-50 py-32 px-8">
         <div className="max-w-7xl mx-auto ">
-          <div className="mb-20  ">
-            <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-4 text-slate-900 italic">Inisiatif Terkini.</h2>
-            <p className="text-slate-500 font-medium">Pilih sektor yang ingin anda bantu untuk pembangunan ummah.</p>
+          <div className="mb-20">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-6 text-slate-900 flex flex-wrap items-center gap-4">
+              {/* Perkataan ni stay, tak gerak */}
+              <motion.span
+                initial={{ opacity: 0, x: 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }} // Mula gerak bila 100px masuk skrin
+                transition={{
+                  duration: 1,
+                  ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier untuk gerakan lebih "mahal"
+                  delay: 0.1
+                }}
+
+
+                className="italic">Inisiatif</motion.span>
+
+              {/* Hanya kotak hijau ni yang slide right */}
+              <motion.span
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }} // Mula gerak bila 100px masuk skrin
+                transition={{
+                  duration: 1,
+                  ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier untuk gerakan lebih "mahal"
+                  delay: 0.1
+                }}
+                className="bg-emerald-600 text-white px-6 py-2 text-3xl md:text-5xl shadow-xl shadow-emerald-100 not-italic block"
+              >
+                Terkini
+              </motion.span>
+            </h2>
+
+            <motion.p
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }} // Mula gerak bila 100px masuk skrin
+              transition={{
+                duration: 1,
+                ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier untuk gerakan lebih "mahal"
+                delay: 0.1
+              }}
+              className="text-slate-500 font-medium text-lg border-l-4 border-emerald-500 pl-4">
+              Pilih sektor yang ingin anda bantu untuk pembangunan ummah.
+            </motion.p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
